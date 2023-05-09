@@ -1,8 +1,10 @@
 from django.urls import path
-from myapp import views
+from .views import index, read, create, delete, update
+
 urlpatterns = [
-    path('', views.index),
-    path('create/', views.index),
-    path('read/1', views.index),
-    path('delete/', views.index)
+    path('', index),
+    path('read/<id>/', read),
+    path('update/<id>/', update),
+    path('create/', create),
+    path('delete/', delete)
 ]
